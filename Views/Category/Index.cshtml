@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Order>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index Category</h2>
+<table class="table table-bordered table-stripped" style="width:100">
+    <thead>
+    <tr>
+        <th>
+            Order Name
+        </th>
+        <th>
+            Order Id
+        </th>
+    </tr>
+</table>
+<tbody>
+    @foreach (var obj in Model)
+    {
+        <tr>
+            <td width="50%">
+                @obj.Name
+            </td>
+            <td width="50%">
+                @obj.Id
+            </td>
+        </tr>
+    }
+</tbody>
+
